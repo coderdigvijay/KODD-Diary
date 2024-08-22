@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: ubuntu;
+    
+}
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url(images/364.gif)
+	 no-repeat center center;	
+	z-index: 99999;
+}
+body
+{
+    background-color: black;
+}
+
+.wrapper
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    
+}
+.intro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem 0rem;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    
+   
+}
+.intro img{
+    width: 12rem;
+    height: 12rem;
+}
+.intro div
+{
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: gloock;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.Highlight
+{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 1rem auto;
+    text-decoration: underline;
+}
+.home
+{
+    position: fixed;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 5rem;
+    margin: 20px;
+    cursor: pointer;
+    background-color: black;
+    
+}
+.home 
+{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+}
+.sec
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+.sec h2
+{
+    color: white;
+    margin: 1rem auto;
+    font-size: x-large;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.sec iframe
+{
+    margin: 1rem auto;
+    border: 2px solid white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.greeting
+{
+    font-size: 3rem;
+    color: rgb(4, 125, 255);
+    margin: 2rem auto;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 0px 0px 5px white;
+}
+
+@media screen and (max-width:1024px) {
+    .intro
+    {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .sec
+    {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .sec iframe
+    {
+        width: 100%;
+        height: 50%;
+    }
+    
+}

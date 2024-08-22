@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: ubuntu;
+}
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url(images/364.gif)
+	 no-repeat center center;	
+	z-index: 99999;
+}
+body
+{
+    /* background-image: url(images/background.jpg);
+    background-size: cover; */
+    background: linear-gradient(to bottom right , rgb(192, 14, 219),blue);
+    animation: bgcol 10s linear infinite;
+    
+}
+
+@keyframes bgcol
+{
+    0%{
+        background: linear-gradient(to bottom right , rgb(192, 14, 219),blue);
+    }
+    50%
+    {
+        background: linear-gradient(to bottom right ,blue, rgb(192, 14, 219));
+    }
+    100%
+    {
+        background: linear-gradient(to bottom right , rgb(192, 14, 219),blue);
+    }
+}
+.wrapper
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    
+}
+.intro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem 0rem;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    
+   
+}
+.intro img{
+    width: 12rem;
+    height: 12rem;
+}
+hr{
+    margin: 1rem 0;
+}
+
+.intro div
+{
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.navigation
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav_items 
+{
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 1.2rem;
+    
+}
+.nav_items a
+{
+    text-decoration: none;
+    color: white;
+}
+.nav_items:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.welc
+{
+    font-size: 2.2rem;
+    color: rgb(252, 92, 0);
+    text-align: center;
+    margin: 1rem 0;
+}
+.khwab
+{
+    margin: 3rem auto;
+    width: 1080px;
+    display: flex;
+    flex-direction: row;
+}
+
+.subheading
+{
+    font-size: 1.5rem;
+    color: white;
+}
+.role
+{
+    font-size: 2.5rem;
+    color: rgb(192, 158, 23);
+}
+
+.khwab_left
+{
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+}
+.khwab_left p
+{
+    /* color: rgb(2, 185, 148); */
+    margin: 2rem auto;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    line-height: 1.5;
+    animation: color 10s linear infinite;
+    color: black;
+    text-shadow: 0px 0px 2px grey;
+}
+
+.khwab_left h2
+{
+    font-size: 2rem;
+    color: yellow;
+}
+.khwab_pro
+{
+    color: red;
+}
+.khwab_right
+{
+    width: 48%;
+    position: relative;
+}
+.khwab_right img
+{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+}
+#google
+{
+    right: 0;
+    bottom: 0;
+    animation: rotate linear infinite 4s;
+}
+#meta
+{
+    right: 0;
+    top: 0;
+    animation: rotate linear infinite 5s;
+}
+#amazon
+{
+    left: 3rem;
+    top: 0;
+    animation: rotate linear infinite 5.5s;
+}
+#apple
+{
+    left: 3rem;
+    bottom: 0;
+    animation: rotate linear infinite 6s;
+}
+#netflix
+{
+    top: 45%;
+    left: 45%;
+    animation: rotate linear infinite 3s;
+}
+
+@keyframes rotate {
+    
+    0%
+    {
+        transform: rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateY(360deg);
+        
+    }
+    
+}
+
+.DSA
+{
+    display: flex;
+    flex-direction: row;
+    width: 1080px;
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    border-radius: 3rem;
+
+}
+
+
+.DSA_Left
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.DSA_Left h2
+{
+    font: bold;
+    font-size: 2.5rem;
+    color: darkorange;
+    text-shadow: 0px 0px 2px black;
+    text-align: center;
+}
+.DSA_Left p
+{
+    font: bold;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+    margin: 2rem 0;
+}
+.DSA_Right
+{
+    width: 50%;
+}
+.DSA_Right img
+{
+    width: 100%;
+}
+.btn a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn::before
+{
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgb(15, 204, 242);
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    border-radius: 2rem;
+}
+.btn
+{
+    padding: 0.5rem 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(15, 204, 242);
+    position: relative;
+    z-index: 1;
+    outline-style: none;
+    border: 1px solid rgb(15, 204, 242);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover::before
+{
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+.btn:hover
+{
+    color: white;
+}
+
+.NOTES
+{
+    display: flex;
+    flex-direction: row;
+    width: 1080px;
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    border-radius: 3rem;
+
+}
+
+
+.NOTES_Left
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.NOTES_Left h2
+{
+    font: bold;
+    font-size: 2.5rem;
+    color: darkorange;
+    text-shadow: 0px 0px 2px black;
+    text-align: center;
+}
+.NOTES_Left p
+{
+    font: bold;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+    margin: 1rem 0;
+}
+.NOTES_Right
+{
+    width: 50%;
+}
+.NOTES_Right img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.Resources
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1080px;
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    border-radius: 3rem;
+
+}
+
+
+.Resources_Left
+{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Resources_Left h2
+{
+    font: bold;
+    font-size: 2.5rem;
+    color: darkorange;
+    text-shadow: 0px 0px 2px black;
+    text-align: center;
+}
+.Resources_Left p
+{
+    font: bold;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+    margin: 1rem 0;
+}
+.Resources_Right
+{
+    width: 50%;
+}
+.Resources_Right img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.Roadmaps
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1080px;
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    border-radius: 3rem;
+
+}
+
+
+.Roadmaps_Left
+{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Roadmaps_Left h2
+{
+    font: bold;
+    font-size: 2.5rem;
+    color: darkorange;
+    text-shadow: 0px 0px 2px black;
+    text-align: center;
+}
+.Roadmaps_Left p
+{
+    font: bold;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+    margin: 1rem 0;
+}
+.Roadmaps_Right
+{
+    width: 50%;
+}
+.Roadmaps_Right img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .intro{
+        flex-wrap: wrap;
+        font-size: medium;
+        text-align: center;
+    }
+
+    .navigation
+    {
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+   .khwab
+   {
+    flex-wrap: wrap;
+    width: 100%;
+   }
+   .khwab_right
+   {
+    display: none;
+    width: 0%;
+   }
+   .khwab_left
+   {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+   }
+   .khwab_left p
+   {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .med
+   {
+    width: 80%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: 2rem auto;
+    text-align: center;
+   }
+   .med_left
+   {
+    width: 90%;
+    margin: 0 auto;
+   }
+   .med_left p
+   {
+    font-size: 1rem;
+    line-height: 1.1;
+   }
+   .med_Right
+   {
+    width: 100%;
+   }
+   .btn
+   {
+    padding: 0 1rem;
+    border-radius: 1rem;
+   }
+}
+
